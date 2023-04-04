@@ -15,7 +15,7 @@
 
   &__container {
     position: relative;
-    padding-top: 25vh;
+    padding-top: 20vh;
     width: min(100% - 30px, 1440px);
     margin: 0 auto;
     text-align: center;
@@ -46,6 +46,58 @@
 
     @media (max-width: 424px) {
       font-size: 20px;
+    }
+  }
+
+  &__contador {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 24px 0 12px;
+
+    &__display {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 150px;
+      height: 150px;
+
+      background-color: $corDoTextoEscura;
+      color: $corDoTextoClara;
+      border-radius: 12px;
+      font-size: 40px;
+
+      &__unidade {
+        font-size: 24px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      &__display {
+        width: 100px;
+        height: 100px;
+        font-size: 28px;
+
+        &__unidade {
+          font-size: 20px;
+        }
+      }
+    }
+
+    @media (max-width: 424px) {
+      gap: 8px;
+      padding: 12px 0 0;
+
+      &__display {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+
+        &__unidade {
+          font-size: 12px;
+        }
+      }
     }
   }
 
